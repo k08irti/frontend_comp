@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olive - Products</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">Olive</div>
+            <nav>
+                <button class="nav-toggle" aria-label="toggle navigation">
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="products.html" class="nav-link">Products</a></li>
+                    <!-- Wrapped icon and count in a container -->
+                    <li><a href="cart.html" class="nav-link cart-link">
+                        🛒 <span id="cart-count"></span>
+                    </a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="products-page section-padding">
+        <div class="container">
+            <h2>Our Products</h2>
+            <div class="product-grid">
+                <!-- Existing Products -->
+                <div class="product-item" data-name="Flawless Foundation" data-price="29.99">
+                    <div class="product-images">
+                        <img src="found.jpg" alt="Foundation" class="default-image">
+                        <img src="found1.jpg" alt="Foundation Hover" class="hover-image">
+                    </div>
+                    <h3>Flawless Foundation</h3>
+                    <p>Achieve a smooth, radiant complexion.</p>
+                    <div class="price">$29.99</div>
+                    <button class="btn-small add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item" data-name="Velvet Matte Lipstick" data-price="19.50">
+                     <div class="product-images">
+                        <img src="lipstick.jpg" alt="Lipstick" class="default-image">
+                        <img src="lip2.jpg" alt="Lipstick Hover" class="hover-image">
+                    </div>
+                    <h3>Velvet Matte Lipstick</h3>
+                    <p>Intense color with a comfortable matte finish.</p>
+                    <div class="price">$19.50</div>
+                    <button class="btn-small add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item" data-name="Glamour Eyeshadow Palette" data-price="35.00">
+                     <div class="product-images">
+                        <img src="eye.jpg" alt="Eyeshadow Palette" class="default-image">
+                        <img src="eye1.jpg" alt="Eyeshadow Hover" class="hover-image">
+                    </div>
+                    <h3>Glamour Eyeshadow Palette</h3>
+                    <p>12 highly pigmented shades for endless looks.</p>
+                    <div class="price">$35.00</div>
+                    <button class="btn-small add-to-cart">Add to Cart</button>
+                </div>
+                 <div class="product-item" data-name="Radiant Blush" data-price="22.00">
+                     <div class="product-images">
+                        <img src="blush.jpg" alt="Blush" class="default-image">
+                        <img src="blush1.jpg" alt="Blush Hover" class="hover-image">
+                    </div>
+                    <h3>Radiant Blush</h3>
+                    <p>Add a healthy flush of color to your cheeks.</p>
+                    <div class="price">$22.00</div>
+                    <button class="btn-small add-to-cart">Add to Cart</button>
+                </div>
+                 <div class="product-item" data-name="Volume Boost Mascara" data-price="18.00">
+                     <div class="product-images">
+                        <img src="mas.jpg" alt="Mascara" class="default-image">
+                        <img src="mas1.jpg" alt="Mascara Hover" class="hover-image">
+                    </div>
+                    <h3>Volume Boost Mascara</h3>
+                    <p>Get dramatic volume and length.</p>
+                    <div class="price">$18.00</div>
+                    <button class="btn-small add-to-cart">Add to Cart</button>
+                </div>
+                 <div class="product-item" data-name="Glow Highlighter" data-price="25.00">
+                     <div class="product-images">
+                        <img src="high.jpg" alt="Highlighter" class="default-image">
+                        <img src="high1.jpg" alt="Highlighter Hover" class="hover-image">
+                    </div>
+                    <h3>Glow Highlighter</h3>
+                    <p>Illuminate your features with a natural glow.</p>
+                    <div class="price">$25.00</div>
+                    <button class="btn-small add-to-cart">Add to Cart</button>
+                </div>
+
+                <!-- New Products -->
+                <div class="product-item" data-name="Setting Spray" data-price="21.00">
+                     <div class="product-images">
+                        <img src="set.jpg" alt="Setting Spray" class="default-image">
+                        <img src="set1.jpg" alt="Setting Spray Hover" class="hover-image">
+                    </div>
+                    <h3>Setting Spray</h3>
+                    <p>Lock your look in place all day.</p>
+                    <div class="price">$21.00</div>
+                    <button class="btn-small add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item" data-name="Brow Pencil" data-price="15.00">
+                     <div class="product-images">
+                        <img src="brown.jpg" alt="Brow Pencil" class="default-image">
+                        <img src="brown1.jpg" alt="Brow Pencil Hover" class="hover-image">
+                    </div>
+                    <h3>Brow Pencil</h3>
+                    <p>Define and fill for perfect brows.</p>
+                    <div class="price">$15.00</div>
+                    <button class="btn-small add-to-cart">Add to Cart</button>
+                </div>
+                 <div class="product-item" data-name="Cream Concealer" data-price="24.00">
+                     <div class="product-images">
+                        <img src="con2.jpg" alt="Concealer" class="default-image">
+                        <img src="con1.jpg" alt="Concealer Hover" class="hover-image">
+                    </div>
+                    <h3>Cream Concealer</h3>
+                    <p>Hide imperfections with creamy coverage.</p>
+                    <div class="price">$24.00</div>
+                    <button class="btn-small add-to-cart">Add to Cart</button>
+                </div>
+                 <div class="product-item" data-name="Matte Bronzer" data-price="28.00">
+                     <div class="product-images">
+                        <img src="mat.jpg" alt="Bronzer" class="default-image">
+                        <img src="mat1.jpg" alt="Bronzer Hover" class="hover-image">
+                    </div>
+                    <h3>Matte Bronzer</h3>
+                    <p>Add warmth and definition to your face.</p>
+                    <div class="price">$28.00</div>
+                    <button class="btn-small add-to-cart">Add to Cart</button>
+                </div>
+                 <div class="product-item" data-name="Hydrating Lip Gloss" data-price="17.00">
+                     <div class="product-images">
+                        <img src="gloss.jpg" alt="Lip Gloss" class="default-image">
+                        <img src="gloss1.jpg" alt="Lip Gloss Hover" class="hover-image">
+                    </div>
+                    <h3>Hydrating Lip Gloss</h3>
+                    <p>Shiny finish with a hydrating feel.</p>
+                    <div class="price">$17.00</div>
+                    <button class="btn-small add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-info">
+                <p>Email: info@oliveshop.com</p>
+                <p>Location: 123 Beauty St, Makeup City, MC 45678</p>
+            </div>
+            <p>&copy; 2025 Olive. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

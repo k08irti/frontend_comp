@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olive - Cart</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">Olive</div>
+            <nav>
+                <button class="nav-toggle" aria-label="toggle navigation">
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="products.html" class="nav-link">Products</a></li>
+                    <!-- Wrapped icon and count in a container -->
+                    <li><a href="cart.html" class="nav-link cart-link">
+                        🛒 <span id="cart-count"></span>
+                    </a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="cart-page section-padding">
+        <div class="container">
+            <h2>Your Cart</h2>
+            <div id="cart-items-container">
+                <!-- Cart items will be loaded here by JavaScript -->
+                <p id="empty-cart-message">Your cart is empty.</p>
+            </div>
+            <div id="cart-total-container" class="cart-total">
+                <!-- Cart total will be loaded here by JavaScript -->
+            </div>
+            <!-- Added Process Order Button -->
+            <button id="process-order-btn" class="btn">Process Order</button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-info">
+                <p>Email: info@oliveshop.com</p>
+                <p>Location: 123 Beauty St, Makeup City, MC 45678</p>
+            </div>
+            <p>&copy; 2025 Olive. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

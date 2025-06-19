@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olive - Home</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">Olive</div>
+            <nav>
+                <button class="nav-toggle" aria-label="toggle navigation">
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="products.html" class="nav-link">Products</a></li>
+                    <!-- Wrapped icon and count in a container -->
+                    <li><a href="cart.html" class="nav-link cart-link">
+                        🛒 <span id="cart-count"></span>
+                    </a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero section with the background video -->
+    <section class="hero">
+        <div class="hero-video-container">
+            <!-- Replaced image with video -->
+            <!--
+                IMPORTANT: Replace the src below with the DIRECT URL of your video file (e.g., .mp4, .webm)
+                The Pinterest link provided might not be suitable for direct embedding due to server restrictions.
+            -->
+            <video autoplay muted loop playsinline class="hero-video">
+                <source src="k.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="hero-content">
+            <!-- Shop Now button -->
+            <a href="products.html" class="btn">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- Removed Featured Products Section -->
+    <!-- Removed About Snippet Section -->
+    <!-- Removed Footer Section from Home Page -->
+
+    <script src="js/script.js"></script>
+</body>
+</html>

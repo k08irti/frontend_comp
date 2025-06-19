@@ -1,0 +1,21 @@
+{
+  "name": "makeup-brand-website",
+  "version": "1.0.0",
+  "description": "A responsive makeup brand website.",
+  "main": "index.html",
+  "scripts": {
+    "dev": "http-server -p 3000 -c-1 --cors -a localhost"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "javascript",
+    "responsive",
+    "website"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "http-server": "^14.1.1"
+  }
+}

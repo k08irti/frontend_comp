@@ -1,0 +1,598 @@
+/* General Styles */
+:root {
+    --primary-color: #e91e63; /* Pink */
+    --secondary-color: #f8bbd0; /* Light Pink */
+    --text-color: #333;
+    --bg-color: #fff;
+    --footer-bg: #f4f4f4;
+    --container-width: 1200px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color); /* Default background color */
+    min-height: 100vh; /* Ensure body takes at least full viewport height */
+    display: flex; /* Use flexbox to push footer to bottom */
+    flex-direction: column; /* Stack children vertically */
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-padding {
+    padding: 60px 0;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    margin-top: 20px;
+    border: none; /* Added border: none for button */
+    cursor: pointer; /* Added cursor: pointer for button */
+}
+
+.btn:hover {
+    background-color: #c2185b; /* Darker Pink */
+}
+
+.btn-small {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.btn-small:hover {
+     background-color: #c2185b; /* Darker Pink */
+}
+
+
+/* Header */
+header {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav li {
+    margin-left: 20px;
+}
+
+nav a {
+    color: var(--text-color);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--primary-color);
+}
+
+/* Cart link container for positioning */
+.cart-link {
+    position: relative; /* Needed for absolute positioning of count */
+    display: inline-block; /* Treat as block for positioning */
+    /* Removed padding-right */
+}
+
+/* Cart count styling */
+#cart-count {
+    position: absolute; /* Position relative to .cart-link */
+    top: -5px; /* Adjust vertical position */
+    right: -10px; /* Adjust horizontal position */
+    background-color: var(--primary-color); /* Background color for the count bubble */
+    color: #fff; /* Text color for the count */
+    font-size: 0.7em; /* Smaller font size */
+    font-weight: bold;
+    border-radius: 50%; /* Make it round */
+    padding: 2px 5px; /* Padding inside the bubble */
+    line-height: 1; /* Adjust line height */
+    min-width: 18px; /* Ensure minimum size */
+    text-align: center;
+    transform: translate(0%, 0%); /* Reset transform */
+    display: none; /* Hide by default when count is 0 */
+}
+
+/* Show count only when it has items */
+#cart-count.has-items {
+    display: block;
+}
+
+
+.nav-toggle {
+    display: none; /* Hidden by default */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    position: relative;
+    z-index: 1001;
+}
+
+.hamburger {
+    display: block;
+    position: relative;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    width: 25px;
+    height: 3px;
+    background: var(--text-color);
+    border-radius: 3px;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    left: 0;
+}
+
+.hamburger::before {
+    top: -8px;
+}
+
+.hamburger::after {
+    top: 8px;
+}
+
+/* Mobile Nav Toggle Animation */
+body.nav-open .hamburger {
+    transform: rotate(45deg);
+}
+
+body.nav-open .hamburger::before {
+    opacity: 0;
+}
+
+body.nav-open .hamburger::after {
+    transform: translateY(-11px) rotate(-90deg);
+}
+
+
+/* Hero Section (for index.html) */
+.hero {
+    position: relative;
+    height: 100vh; /* Full viewport height minus header height */
+    overflow: hidden;
+    display: flex; /* Use Flexbox */
+    justify-content: flex-start; /* Align content to the start (left) */
+    align-items: flex-end; /* Align content to the bottom */
+    color: #fff;
+    flex-grow: 1; /* Allow hero section to take up available space */
+    padding: 20px; /* Add padding to the hero container */
+}
+
+.hero-video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Place video behind content */
+}
+
+.hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-content {
+    position: relative; /* Keep relative if needed for z-index, but positioning is handled by flex parent */
+    z-index: 1; /* Ensure content is above video */
+    background-color: rgba(0, 0, 0, 0.4); /* Overlay for readability */
+    padding: 30px; /* Keep padding */
+    border-radius: 10px;
+    text-align: left; /* Explicitly align text left */
+    max-width: 90%; /* Limit width */
+    /* Removed bottom, left, position: absolute */
+}
+
+/* Removed hero h1 and p styles as they are not in index.html anymore */
+/*
+.hero h1 {
+    color: #fff;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.hero p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    text-align: left;
+}
+*/
+
+.hero .btn {
+    margin-top: 0; /* Remove top margin from button */
+}
+
+
+/* Product Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.product-item {
+    text-align: center;
+    border: 1px solid #eee;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Image Container for Hover Effect */
+.product-images {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%; /* Maintain 1:1 aspect ratio */
+    overflow: hidden;
+    margin-bottom: 15px;
+    border-radius: 5px; /* Apply border radius to container */
+}
+
+.product-images img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease; /* Smooth transition */
+    border-radius: 5px; /* Apply border radius to images */
+}
+
+.product-images .hover-image {
+    opacity: 0; /* Hide hover image by default */
+}
+
+.product-item:hover .product-images .default-image {
+    opacity: 0; /* Hide default image on hover */
+}
+
+.product-item:hover .product-images .hover-image {
+    opacity: 1; /* Show hover image on hover */
+}
+
+
+.product-item h3 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.product-item p {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.product-item .price {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+
+/* About Snippet (Removed from index.html, keeping styles just in case) */
+/*
+.about-snippet {
+    text-align: center;
+    background-color: var(--secondary-color);
+}
+
+.about-snippet h2 {
+    color: var(--text-color);
+}
+*/
+
+/* About Page */
+.about-page {
+    text-align: left;
+}
+
+.about-page h2 {
+    text-align: center;
+}
+
+.about-image {
+    display: block; /* Make image a block element */
+    max-width: 100%; /* Ensure image is responsive */
+    height: auto;
+    margin: 0 auto 30px auto; /* Center image and add space below */
+    border-radius: 8px; /* Optional: add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add shadow */
+}
+
+
+/* Products Page */
+.products-page h2 {
+     text-align: center;
+}
+
+/* Cart Page */
+.cart-page h2 {
+    text-align: center;
+}
+
+#cart-items-container {
+    margin-top: 20px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+    margin-bottom: 10px;
+}
+
+.cart-item-info {
+    flex-grow: 1;
+}
+
+.cart-item-info h4 {
+    margin: 0 0 5px 0;
+    color: var(--text-color);
+    text-align: left;
+}
+
+.cart-item-info p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.cart-item-price {
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-left: 20px;
+}
+
+/* Style for the remove button */
+.remove-item {
+    background: none;
+    border: none;
+    color: #e91e63; /* Primary color for delete icon */
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-left: 15px;
+    padding: 0;
+    transition: color 0.3s ease;
+}
+
+.remove-item:hover {
+    color: #c2185b; /* Darker pink on hover */
+}
+
+
+#empty-cart-message {
+    text-align: center;
+    font-style: italic;
+    color: #666;
+}
+
+.cart-total {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px solid var(--primary-color);
+    text-align: right;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* Style for the Process Order button */
+#process-order-btn {
+    display: block; /* Make it a block element */
+    width: 100%; /* Make it full width */
+    max-width: 300px; /* Limit max width */
+    margin: 30px auto 0 auto; /* Center the button and add space above */
+    padding: 12px 20px; /* Adjust padding */
+    font-size: 1.1em; /* Adjust font size */
+}
+
+
+/* Footer */
+footer {
+    background-color: var(--footer-bg);
+    text-align: center;
+    padding: 20px 0;
+    color: #666;
+    margin-top: 40px; /* Default margin for pages with footer */
+}
+
+/* Style for the footer info container */
+.footer-info {
+    margin-bottom: 10px; /* Space between info and copyright */
+}
+
+.footer-info p {
+    margin: 5px 0; /* Space between email and location lines */
+    font-size: 0.9em;
+    color: #555;
+}
+
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    header .container {
+        flex-wrap: wrap;
+    }
+
+    nav {
+        width: 100%;
+        order: 3; /* Push nav below logo and toggle */
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        display: none; /* Hide by default */
+        margin-top: 15px;
+    }
+
+    nav li {
+        margin: 10px 0;
+    }
+
+    .nav-toggle {
+        display: block; /* Show toggle button */
+    }
+
+    body.nav-open .nav-list {
+        display: flex; /* Show nav list when open */
+    }
+
+    /* Hero styles for smaller screens */
+    .hero {
+         height: calc(100vh - 50px); /* Adjust height for smaller header */
+         padding: 15px; /* Adjust padding */
+    }
+
+    .hero-content {
+        padding: 20px;
+    }
+
+
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .section-padding {
+        padding: 40px 0;
+    }
+
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cart-item-info {
+        margin-bottom: 10px;
+    }
+
+    .cart-item-price {
+        margin-left: 0;
+    }
+
+    .about-image {
+        margin-bottom: 20px; /* Adjust margin for smaller screens */
+    }
+
+
+    #process-order-btn {
+        max-width: 250px; /* Adjust max width for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.5em;
+    }
+
+    /* Hero styles for very small screens */
+     .hero {
+         height: calc(100vh - 45px); /* Adjust height for smaller header */
+         padding: 10px; /* Adjust padding */
+    }
+
+    .hero-content {
+        padding: 15px;
+    }
+
+    .btn {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr; /* Stack products on very small screens */
+    }
+
+    .cart-total {
+        font-size: 1.2em;
+    }
+
+     #process-order-btn {
+        max-width: 200px; /* Adjust max width for very small screens */
+        padding: 10px 15px;
+        font-size: 1em;
+    }
+}
