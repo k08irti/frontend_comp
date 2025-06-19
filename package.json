@@ -4,7 +4,7 @@
   "description": "A responsive makeup brand website.",
   "main": "index.html",
   "scripts": {
-    "dev": "http-server -p 3000 -c-1 --cors -a localhost"
+    "dev": "http-server -p 3000 -c-1 --cors -a 0.0.0.0"
   },
   "keywords": [
     "html",
